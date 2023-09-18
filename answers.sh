@@ -5,11 +5,15 @@
 # INSERT INTO students values("7","Mariam","22","F","400")
 # UPDATE students SET points=points+100 where name="Basma"
 # UPDATE students SET points=points-100 where name="Alex"
-INSERT INTO graduates(name,Age,Gender,Points,Graduation)
-SELECT name,Age,Gender,Points,NULL
-FROM students
-WHERE name="Layal";
+# INSERT INTO graduates(name,Age,Gender,Points,Graduation)
+# SELECT name,Age,Gender,Points,NULL
+# FROM students
+# WHERE name="Layal";
 
-update graduates SET Graduation=("08/09/2018")
+# update graduates SET Graduation=("08/09/2018")
 
-Delete from students where name="Layal"
+# Delete from students where name="Layal"
+
+select name FROM employees where company=(select name from companies)
+select name FROM employees where Company =(select name from companies where date<2000)
+select name FROM employees where company=(select name from companies where role = "Graphic Designer")
